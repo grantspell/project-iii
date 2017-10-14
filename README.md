@@ -11,4 +11,18 @@
 
 [Trello Board](https://trello.com/b/phhJCRlC)
 
+## Technologies Used
+
++ Express
+
++ Mongoose
+
++ React
+
+•••+ react-dom
+
+•••+ react-scripts
+
++ Heroku
+
 ## Bugs
