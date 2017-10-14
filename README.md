@@ -14,15 +14,10 @@
 ## Technologies Used
 
 + Express
-
 + Mongoose
-
 + React
-
-••• > react-dom
-
-••• > react-scripts
-
+••+ react-dom
+••+ react-scripts
 + Heroku
 
 ## Bugs
