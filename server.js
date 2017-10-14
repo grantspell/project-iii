@@ -3,12 +3,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-
+// OVERWRITE MONGOOSE'S PROMISE LIBRARY + CREAT EXPRESS APP
 mongoose.Promise = global.Promise;
 const app = express();
 
 // CONNECT TO MONGODB + CONNECTED/ERROR MESSAGES
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true });
 const connection = mongoose.connection;
 
 connection.on('connected', () => {
@@ -20,10 +20,15 @@ connection.on('error', (err) => {
 });
 
 // INJECT MIDDLEWARE
+app.use(express.static(`${__dirname}/client/build`))
 app.use(bodyParser.json());
 
+// CONTROLLERS
+
+
+// INDEX ROUTE RENDERS OUR REACT APP
 app.get('/', (req, res) => {
-    res.send('Hello, World!')
+    res.sendFile(`${__dirname}/client/build/index.html`)
 })
 
 // Server PORT Settings
