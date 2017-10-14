@@ -19,9 +19,9 @@
 
 + React
 
-•••+ react-dom
+••• > react-dom
 
-•••+ react-scripts
+••• > react-scripts
 
 + Heroku
 
