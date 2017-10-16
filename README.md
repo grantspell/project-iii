@@ -17,7 +17,17 @@
 
 ## Wireframes
 
+### / Landing Page
 ![ Landing Page ](./wireframes/i:landingPage.jpeg)
+
+### / SignUp Page
+![ SignUp Page ](./wireframes/ii:signUpPage.jpeg)
+
+### / User Index Page
+![ User Index Page ](./wireframes/iii:userIndexPage.jpeg)
+
+### / Productivity Page
+![ Productivity Page ](./wireframes/iv:productivityPage.jpeg)
 
 ## Technologies Used
 
