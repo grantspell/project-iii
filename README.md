@@ -15,7 +15,7 @@
 
 + Express
 + Mongoose
-+ React
++ Reac
 ••+ react-dom
 ••+ react-scripts
 + Heroku
