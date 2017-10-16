@@ -11,13 +11,19 @@
 
 [Trello Board](https://trello.com/b/phhJCRlC)
 
+## ERD
+
+![ Data Model ](./ERD/ProjectIII_ERD.jpg)
+
+## Wireframes
+
+![ Landing Page ](./wireframes/i:landingPage.jpeg)
+
 ## Technologies Used
 
 + Express
 + Mongoose
-+ Reac
-••+ react-dom
-••+ react-scripts
++ React
 + Heroku
 
 ## Bugs
