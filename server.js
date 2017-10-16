@@ -24,7 +24,7 @@ app.use(express.static(`${__dirname}/client/build`))
 app.use(bodyParser.json());
 
 // CONTROLLERS
-
+app.use('/api/users', UsersController)
 
 // INDEX ROUTE RENDERS OUR REACT APP
 app.get('/', (req, res) => {
