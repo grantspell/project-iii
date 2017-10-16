@@ -3,6 +3,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+const UsersController = require('./controllers/UsersController')
+
 // OVERWRITE MONGOOSE'S PROMISE LIBRARY + CREAT EXPRESS APP
 mongoose.Promise = global.Promise;
 const app = express();
