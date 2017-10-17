@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 class UsersIndex extends Component {
 
     state = {
-        usersData: []       
+        users: []       
     }
 
     componentWillMount () {
@@ -17,7 +17,7 @@ class UsersIndex extends Component {
     fetchUsers = async () => {
         try {
             const res = await axios.get('/api/users')
-            this.setState({ usersData: res.data })
+            this.setState({ users: res.data })
 
         } catch (err) {
             console.log(err)

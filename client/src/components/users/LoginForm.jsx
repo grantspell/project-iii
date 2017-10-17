@@ -5,7 +5,7 @@ class LoginForm extends Component {
         return (
             <div>
                 <h1> Existing Users Login </h1> 
-                               
+                <h3> This should be a form to allow users in DB to signin using their username | Reach Goal </h3>
             </div>
         );
     }
