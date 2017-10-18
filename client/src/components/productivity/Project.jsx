@@ -22,22 +22,12 @@ const Project = (props) => {
              <input 
             onBlur={updateProject}
             onChange={handleChange}
-            name="whatN"
+            name="projecName"
             value={props.whatN}
             />
-            <span> to </span>
-            <input 
-            onBlur={updateProject}
-            onChange={handleChange}
-            name="whatV"
-            value={props.whatV}
-            /> 
 
-            <div><br/>
             <button onClick={deleteProject}>Delete Project</button>
-            </div>
 
-            <div> <br/> </div>
 
         </div>
     )

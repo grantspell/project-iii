@@ -4,20 +4,19 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 // IMPORT COMPONENTS
 import LandingPage from './components/landing/LandingPage'
 import ProductivityPage from './components/productivity/ProductivityPage'
-import UsersIndex from './components/users/UsersIndex'
-import SignUpForm from './components/users/SignUpForm'
+import Login from './components/users/Login'
+import UserSignUp from './components/users/UserSignUp'
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/user/:userId" component={ProductivityPage} />
-            <Route exact path="/usersIndex" component={UsersIndex} />
-            <Route exact path='/signup' component={SignUpForm} />
+            <Route exact path="/logIn" component={Login} />
+            <Route exact path='/signUp' component={UserSignUp} />
           </Switch>
         </div>
       </Router>

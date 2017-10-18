@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 import ProjectsList from './ProjectsList'
@@ -24,7 +25,7 @@ class ProductivityPage extends Component {
     }
 
 // Create Project
-    createNewProject = async (event) => {
+    createNewProject = async () => {
         const { userId } = this.props.match.params
         const res = await axios.post(`/api/users/${userId}/projects`)
         console.log(res.data)
@@ -65,7 +66,9 @@ class ProductivityPage extends Component {
     render() {
         return (
             <div>
+                <Link to="/">Home</Link><br/><br/>
                 <h1> {this.state.user.userName}s PRODUCTIVITY PAGE </h1>
+
                 <button onClick={this.createNewProject}>New Project</button>
                 <ProjectsList
                     projects={this.state.user.projects}

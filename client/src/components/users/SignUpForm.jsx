@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import axios from 'axios'
 
 class SignUpForm extends Component {
@@ -46,6 +46,7 @@ class SignUpForm extends Component {
                             type="text" value={this.state.newUser.userName}
                         />
                     </div>
+                    <br />
                     <button>Sign Up</button>
                 </form>
             </div>

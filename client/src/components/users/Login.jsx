@@ -4,18 +4,51 @@ import { Link } from 'react-router-dom'
 
 // COMPONENETS
 import UsersIndex from './UsersIndex'
-import LoginForm from './LoginForm'
 import SignUpForm from './SignUpForm'
 
 class Login extends Component {
 
+    state = {
+        users: [{
+            userName: '',
+            projects: [{
+                projectName:'',
+                whatN: '',
+                whatV: '',
+                projectStatus: '',
+                tasks: [{
+                    description: '',
+                    taskName: '',
+                    taskStatus: ''
+                }]
+            }]
+        }]       
+    }
+
+    componentWillMount () {
+        this.fetchUsers()
+    }
+
+    // GET USERS [axios]
+    fetchUsers = async () => {
+        try {
+            const res = await axios.get('/api/users')
+            this.setState({ users: res.data })
+
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
     render() {
         return (
             <div>
-                <UsersIndex />
-                <SignUpForm />
-                <LoginForm />
-                <Link to='/signup'>New User | Sign Up</Link>
+                <Link to="/">Home</Link>
+                <UsersIndex 
+                    users={this.state.users}
+                />
+                <br />
+                <Link to='/signUp'>New User? Sign Up Here</Link>
             </div>
         );
     }
