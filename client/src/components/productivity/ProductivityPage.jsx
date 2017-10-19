@@ -12,8 +12,6 @@ class ProductivityPage extends Component {
         user: {
             userName: '',
             projects: [{
-                whatN: '',
-                whatV: '',
                 projectName: ''
             }]
         }
