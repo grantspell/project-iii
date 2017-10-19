@@ -34,6 +34,7 @@
 + Express
 + Mongoose
 + React
++ Styled-Components
 + Heroku
 
 ## Bugs
