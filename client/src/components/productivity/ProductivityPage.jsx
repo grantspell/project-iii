@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
+
+// IMPORT COMPONENTS
+import NavBar from '../landing/NavBar'
 import ProjectsList from './ProjectsList'
 
 class ProductivityPage extends Component {
@@ -66,7 +69,7 @@ class ProductivityPage extends Component {
     render() {
         return (
             <div>
-                <Link to="/">Home</Link><br/><br/>
+                <NavBar />
                 <h1> {this.state.user.userName}s PRODUCTIVITY PAGE </h1>
 
                 <button onClick={this.createNewProject}>New Project</button>

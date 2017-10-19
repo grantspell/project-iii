@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 // COMPONENETS
+import NavBar from '../landing/NavBar'
 import UsersIndex from './UsersIndex'
 import SignUpForm from './SignUpForm'
 
@@ -22,7 +23,7 @@ class Login extends Component {
                     taskStatus: ''
                 }]
             }]
-        }]       
+        }]
     }
 
     componentWillMount () {
@@ -43,7 +44,7 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <Link to="/">Home</Link>
+                <NavBar />
                 <UsersIndex 
                     users={this.state.users}
                 />

@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router({mergeParams: true})
-const { User, Project } = require('../db/schema')
+const { User, Project, Task } = require('../db/schema')
 
 router.get('/', (req, res) => {
     User.find()
@@ -40,20 +40,3 @@ router.delete('/:id', async (req, res) => {
 })
 
 module.exports = router
-
-/* const ProjectSchema = new Schema({
-    whatN: {
-        type: String,
-        default: 'What(n.)'
-    },
-    whatV: {
-        type: String,
-        default: 'What(v.)'
-    },
-    projectName: '',
-    projectStatus: {
-        type: String,
-        default: 'INCOMPLETE'
-    },
-    tasks: [TaskSchema]
-}) */

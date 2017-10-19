@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 
-// IMPORT COMPONENTS
-
-
-class NavBar extends Component {
+class LandingGreeting extends Component {
     render() {
         return (
             <div>
-                <h1>What(n.) to What(v.)</h1>
+                <h1></h1>
             </div>
         );
     }
 }
 
-export default NavBar;
+export default LandingGreeting;

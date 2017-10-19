@@ -23,9 +23,10 @@ const Project = (props) => {
             onBlur={updateProject}
             onChange={handleChange}
             name="projecName"
-            value={props.whatN}
+            value={props.projecName}
             />
-
+            
+            <br />
             <button onClick={deleteProject}>Delete Project</button>
 
 

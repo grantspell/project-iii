@@ -1,0 +1,20 @@
+    loadNavBar = async (props) => {
+        const landNavBar = this.props.navBar
+        this.setState({navBar: landNavBar})
+    }
+
+    const componentWillMount = () => {
+        loadNavBar()
+    }
+
+
+    ///
+
+
+// below was in User.jsx
+// it renders a form for adjusting the user information
+
+                <div>
+                <input onBlur={updateUser} onChange={handleChange} name="userName" value={props.userName} />
+                <button onClick={deleteUser}>Delete User</button>
+            </div>

@@ -3,7 +3,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+// REQUIRE CONTROLLERS
 const UsersController = require('./controllers/UsersController')
+const ProjectsController = require('./controllers/ProjectsController')
+const TasksController = require('./controllers/TasksController')
 
 // OVERWRITE MONGOOSE'S PROMISE LIBRARY + CREAT EXPRESS APP
 mongoose.Promise = global.Promise;
@@ -27,6 +30,8 @@ app.use(bodyParser.json());
 
 // CONTROLLERS
 app.use('/api/users', UsersController)
+app.use('/api/users/:userId/projects', ProjectsController)
+app.use('/api/users/:userId/projects/:projectId/tasks', TasksController)
 
 // INDEX ROUTE RENDERS OUR REACT APP
 app.get('/', (req, res) => {
