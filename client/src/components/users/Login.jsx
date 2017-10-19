@@ -3,9 +3,8 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 // COMPONENETS
-import NavBar from '../landing/NavBar'
-import UsersIndex from './UsersIndex'
-import SignUpForm from './SignUpForm'
+import UsersIndex from './existingUsers/UsersIndex'
+import SignUpForm from './newUsers/SignUpForm'
 
 class Login extends Component {
 
@@ -44,7 +43,6 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <NavBar />
                 <UsersIndex 
                     users={this.state.users}
                 />

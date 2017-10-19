@@ -4,7 +4,6 @@ import axios from 'axios'
 import styled from 'styled-components'
 
 // IMPORT COMPONENTS
-import NavBar from '../landing/NavBar'
 import ProjectsList from './ProjectsList'
 
 class ProductivityPage extends Component {
@@ -35,13 +34,6 @@ class ProductivityPage extends Component {
         this.setState({ user: res.data })
     }
 
-// Delete Project
-    deleteProject = async (projectId) => {
-        const { userId } = this.props.match.params
-        const id = projectId
-        const res = await axios.delete(`/api/users/${userId}/projects/${id}`)
-        this.setState({ user: res.data })
-    }
 
 // Patch
     handleChange = (event, projectId) => {
@@ -65,11 +57,17 @@ class ProductivityPage extends Component {
         this.setState({ user: res.data })
     }
 
+// Delete Project
+    deleteProject = async (projectId) => {
+        const { userId } = this.props.match.params
+        const id = projectId
+        const res = await axios.delete(`/api/users/${userId}/projects/${id}`)
+        this.setState({ user: res.data })
+    }
 
     render() {
         return (
             <div>
-                <NavBar />
                 <h1> {this.state.user.userName}s PRODUCTIVITY PAGE </h1>
 
                 <button onClick={this.createNewProject}>New Project</button>

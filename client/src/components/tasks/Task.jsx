@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Project = (props) => {
+const Task = (props) => {
     const deleteProject = () => {
         props.deleteProject(props._id)
     }
@@ -18,23 +18,19 @@ const Project = (props) => {
         <div>
             <br/>
             <h1>{props.projectName}</h1>
-
-            <label for="projectName">Edit Project Name: </label>            
-            <br />
-            <input 
+            
+             <input 
                 onBlur={updateProject}
                 onChange={handleChange}
                 name="projectName"
                 value={props.projectName}
             />
             
-            <br /><br />
-            <button onClick="/">Open Project</button>
+            <br />
             <button onClick={deleteProject}>Delete Project</button>
-
 
         </div>
     )
 }
 
-export default Project
+export default Task

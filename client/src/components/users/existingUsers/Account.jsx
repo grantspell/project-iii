@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 // IMPORT COMPONENTS
-import NavBar from '../landing/NavBar'
+
 
 class Account extends Component {
 
@@ -36,10 +36,9 @@ class Account extends Component {
     render() {
         return (
             <div>
-                <NavBar />
                 <h1>{this.state.user.userName}s Account</h1>
                 
-                <button onClick={this.deleteUser}><Link to={`/user/{this.state.user.userId/account/delete}`}>DELETE</Link></button>
+                <button onClick={this.deleteUser}><Link to={`/user/{this.state.user.userId}/account/delete}`}>DELETE</Link></button>
             </div>
         );
     }

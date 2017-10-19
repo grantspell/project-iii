@@ -12,7 +12,6 @@ const ProjectsList = (props) => {
                     handleChange={props.handleChange}
                     updateProject={props.updateProject}
                     deleteProject={props.deleteProject}
-                    whatN={project.whatN} whatV={project.whatV}
                     projectName={project.projectName}
                     />
                 )

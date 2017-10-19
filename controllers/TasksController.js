@@ -13,10 +13,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-    const newProject = new Project()
+    const newTask = new Task()
 
     const user = await User.findById(req.params.userId)
-    user.projects.push(newProject)
+    user.projects.task.push(newTask)
     const saved = await user.save()
     res.json(saved)
 })

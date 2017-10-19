@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // IMPORT COMPONENTS
-import NavBar from '../landing/NavBar'
 
 const User = (props) => {
 

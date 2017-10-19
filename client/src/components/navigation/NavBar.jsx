@@ -3,7 +3,13 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 // IMPORT COMPONENTS
-import LandingPage from './LandingPage'
+
+const NavBarStyles = styled.div`
+text-align: center;
+background-color: gray;
+color: white;
+padding: 3px;
+`
 
 class NavBar extends Component {
 
@@ -19,13 +25,13 @@ class NavBar extends Component {
 
     render () {
         return (
-            <div>            
+            <NavBarStyles>            
                 <h1>{this.state.navBar.title}</h1>
                 <div>{this.state.navBar.right0}</div>
                 <div>{this.state.navBar.right1}</div>
                 <div>{this.state.navBar.right2}</div>
                 <div>{this.state.navBar.right3}</div>
-            </div>    
+            </NavBarStyles>    
         )
     }
 }
